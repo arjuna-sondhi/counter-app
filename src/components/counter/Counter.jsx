@@ -11,26 +11,27 @@ class Counter extends Component {
       counter: 0,
     };
 
-    this.increment = this.increment.bind(this);
+    //arrow function prevents the need for binding
+    //this.increment = this.increment.bind(this);
   }
 
-  render() {
+  render = () => {
     return (
       <div className="counter">
-        <button onClick={this.increment}>+1</button>
+        <button onClick={this.increment}>+{this.props.by}</button>
         <span className="count">{this.state.counter}</span>
       </div>
     );
-  }
+  };
 
-  increment() {
+  increment = () => {
     //Update the state - counter++
     //console.log("increment");
     // this.state.counter++;
     this.setState({
-      counter: this.state.counter + 1,
+      counter: this.state.counter + this.props.by,
     });
-  }
+  };
 }
 
 export default Counter;
