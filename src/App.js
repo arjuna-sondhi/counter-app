@@ -9,20 +9,35 @@ class App extends Component {
         My Hello World
         <FirstComponent />
         <SecondComponent />
+        <ThirdComponent />
+        <FourthComponent />
       </div>
     );
   }
 }
 
+//Class Component
 class FirstComponent extends Component {
   render() {
-    return <div className="FirstComponent">First Component</div>;
+    return <div className="firstComponent">First Component</div>;
   }
 }
 
+//Class Component
 class SecondComponent extends Component {
   render() {
-    return <div className="SecondComponent">Second Component</div>;
+    return <div className="secondComponent">Second Component</div>;
   }
 }
+
+//Function Component
+function ThirdComponent() {
+  return <div className="thirdComponent">Third Component</div>;
+}
+
+//Function Component
+function FourthComponent() {
+  return <div className="fourthComponent">Fourth Component</div>;
+}
+
 export default App;
