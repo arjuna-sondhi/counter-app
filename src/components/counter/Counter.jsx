@@ -1,10 +1,9 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
+import CounterButton from "./CounterButton";
 import "./Counter.css";
 
 class Counter extends Component {
-  //Define the initial state in a constructor
-  //state => counter 0
-
   constructor() {
     super(); //  Error many people make
     this.state = {
@@ -15,23 +14,25 @@ class Counter extends Component {
     //this.increment = this.increment.bind(this);
   }
 
-  render = () => {
+  increment = (by) => {
+    //Update the state - counter++
+    // console.log(`increment in parent = ${by}`);
+    // this.state.counter++;
+    this.setState({
+      counter: this.state.counter + by,
+    });
+  };
+
+  render() {
     return (
       <div className="counter">
-        <button onClick={this.increment}>+{this.props.by}</button>
+        <CounterButton by={1} incrementMethod={this.increment} />
+        <CounterButton by={5} incrementMethod={this.increment} />
+        <CounterButton by={10} incrementMethod={this.increment} />
         <span className="count">{this.state.counter}</span>
       </div>
     );
-  };
-
-  increment = () => {
-    //Update the state - counter++
-    //console.log("increment");
-    // this.state.counter++;
-    this.setState({
-      counter: this.state.counter + this.props.by,
-    });
-  };
+  }
 }
 
 export default Counter;
