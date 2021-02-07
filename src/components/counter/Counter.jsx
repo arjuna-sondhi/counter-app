@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import CounterButton from "./CounterButton";
 import "./Counter.css";
 
 class Counter extends Component {
   constructor() {
     super(); //  Error many people make
+
+    //storing counter in state, use this to update state of object
     this.state = {
       counter: 0,
     };
@@ -15,18 +16,14 @@ class Counter extends Component {
   }
 
   increment = (by) => {
-    //Update the state - counter++
-    // console.log(`increment in parent = ${by}`);
-    // this.state.counter++;
+    //Update the state : increment counter of previous state by "by"
     this.setState((prevState) => {
       return { counter: prevState.counter + by };
     });
   };
 
   decrement = (by) => {
-    //Update the state - counter++
-    // console.log(`increment in parent = ${by}`);
-    // this.state.counter++;
+    //Update the state : decrement counter of previous state by "by"
     this.setState((prevState) => {
       return { counter: prevState.counter - by };
     });
@@ -61,7 +58,6 @@ class Counter extends Component {
             Reset
           </button>
         </div>
-
         <span className="count">{this.state.counter}</span>
       </div>
     );
