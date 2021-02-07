@@ -3,10 +3,24 @@
 This project was done to mess with react components and create a counter app.
 
 Features:
+
 - Increment counter by 1, 5, 10
 - Decrement counter by 1, 5, 10
 - Reset the count
 
+# Preview image of app
+
+![](images/counter-app-preview.png)
+
+# How to Run this App
+
+1. Clone the repo
+2. Navigate to the project folder
+3. Make sure you have npm installed globally or install npm in the project folder
+4. Run "npm install" using terminal
+5. Once the mode_modules folder is created after the successful run of npm install, you can run the application
+6. Run "npm start" using the terminal to run the application
+7. Et Voila! The app should run and it will open in your browser
 
 # Getting Started with Create React App
 
