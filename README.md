@@ -1,3 +1,13 @@
+# Purpose of project
+
+This project was done to mess with react components and create a counter app.
+
+Features:
+- Increment counter by 1, 5, 10
+- Decrement counter by 1, 5, 10
+- Reset the count
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
