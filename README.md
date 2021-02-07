@@ -16,8 +16,8 @@ Features:
 
 1. Clone the repo
 2. Navigate to the project folder
-3. Make sure you have npm installed globally or install npm in the project folder
-4. Run "npm install" using terminal
+3. Make sure you have Nodejs installed
+4. Open the terminal and navigate to the project folder and then run "npm install"
 5. Once the mode_modules folder is created after the successful run of npm install, you can run the application
 6. Run "npm start" using the terminal to run the application
 7. Et Voila! The app should run and it will open in your browser
